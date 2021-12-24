@@ -29,9 +29,9 @@ test:
   extends: .prepare
   script:
     - echo 'not'
-    - #php composer.phar fix-style
-    - #php composer.phar check-style
-    - #php composer.phar security
+    #- php composer.phar fix-style
+    #- php composer.phar check-style
+    #- php composer.phar security
 
 deploy:
   stage: deploy

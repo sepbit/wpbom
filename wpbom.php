@@ -7,7 +7,7 @@ Version: 1.0.1
 Author: Vitor Guia
 Author URI: https://vitor.guia.nom.br
 
-@package WPOnError
+@package WpBom
  */
 
 namespace Sepbit\WpBom;

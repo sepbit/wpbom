@@ -12,10 +12,13 @@
   },
   "require-dev": {
     "dealerdirect/phpcodesniffer-composer-installer": "^0.7.1",
-    "wp-coding-standards/wpcs": "^2.3"
+    "wp-coding-standards/wpcs": "^2.3",
+    "pheromone/phpcs-security-audit": "^2.0",
+    "cyclonedx/cyclonedx-php-composer": "^3.9"
   },
   "scripts": {
-    "fix-style": "phpcbf -p --standard=WordPress wpbom.php src/",
-    "check-style": "phpcs -p --standard=WordPress wpbom.php src/"
+    "fix-style": "phpcbf -p --standard=phpcs.xml wpbom.php src/",
+    "check-style": "phpcs -p --standard=phpcs.xml wpbom.php src/",
+    "security" : "phpcs -p --standard=Security wpbom.php src/"
   }
 }

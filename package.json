@@ -1,0 +1,12 @@
+{
+  "scripts": {
+    "doc": "jsdoc assets/js/*.js -d doc/jsdoc/",
+    "fix-style": "standard --fix 'assets/js/*.js' && prettier -w *.json",
+    "check-style": "standard 'assets/js/*.js'"
+  },
+  "devDependencies": {
+    "@cyclonedx/bom": "^3.3.1",
+    "prettier": "^2.3",
+    "standard": "^14.3"
+  }
+}

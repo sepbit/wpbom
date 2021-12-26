@@ -36,6 +36,7 @@ class OptionsPageController {
 				'title'        => __( 'WpBom', 'wpbom' ),
 				'object_types' => array( 'options-page' ),
 				'option_key'   => 'wpbom',
+                                'icon_url'     => 'dashicons-admin-plugins',
 			)
 		);
 		$cmb->add_field(

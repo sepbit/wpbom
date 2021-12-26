@@ -81,5 +81,8 @@ $ composer update --no-dev
 
 == Changelog ==
 
+= 1.0.2 =
+* Add icon
+
 = 1.0.0 =
 * First release!

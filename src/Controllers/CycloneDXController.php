@@ -74,7 +74,6 @@ class CycloneDXController {
 			$bom['components'][ $key ]['bom-ref'] = 'pkg:wordpress/plugins/' . $plugin['TextDomain'] . '@' . $plugin['Version'];
 			$bom['components'][ $key ]['name']    = $plugin['TextDomain'];
 			$bom['components'][ $key ]['version'] = $plugin['Version'];
-			$bom['components'][ $key ]['purl']    = 'pkg:wordpress/plugins/' . $plugin['TextDomain'] . '@' . $plugin['Version'];
 
 			if ( ! empty( $plugin['Author'] ) ) {
 				$bom['components'][ $key ]['author'] = $plugin['Author'];
@@ -123,7 +122,6 @@ class CycloneDXController {
 			$bom['components'][ $key ]['bom-ref'] = 'pkg:wordpress/themes/' . $theme->get( 'TextDomain' ) . '@' . $theme->get( 'Version' );
 			$bom['components'][ $key ]['name']    = $theme->get( 'TextDomain' );
 			$bom['components'][ $key ]['version'] = $theme->get( 'Version' );
-			$bom['components'][ $key ]['purl']    = 'pkg:wordpress/themes/' . $theme->get( 'TextDomain' ) . '@' . $theme->get( 'Version' );
 
 			if ( ! empty( $theme->get( 'Author' ) ) ) {
 				$bom['components'][ $key ]['author'] = $theme->get( 'Author' );

@@ -1,7 +1,7 @@
 <?php
 /**
  * Wpbom - WordPress integration with OWASP CycloneDX and Dependency Track
- * Copyright (C) 2021  Sepbit
+ * Copyright (C) 2021-2022  Vitor Guia
  *
  * This program is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public License

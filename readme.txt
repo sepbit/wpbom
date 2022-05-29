@@ -3,8 +3,8 @@ Contributors: vitoranguia
 Donate link: https://liberapay.com/vitoranguia/
 Tags: BOM, CycloneDX, Dependency Track
 Requires at least: 4.7
-Tested up to: 5.8
-Stable tag: 1.0.1
+Tested up to: 6.0
+Stable tag: 1.1.0
 Requires PHP: 7.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -25,6 +25,24 @@ Features:
 
 == Frequently Asked Questions ==
 
+Add [CPE](https://nvd.nist.gov/products/cpe) from BOM
+
+`
+add_filter(
+	'wpbom_bom',
+	function( $bom ) {
+		foreach ( $bom['components'] as $key => $component ) {
+			if ( 'woocommerce' === $component['name'] ) {
+                $bom['components'][ $key ]['cpe'] = 'cpe:2.3:a:woocommerce:woocommerce:' . $component['version'] . ':*:*:*:*:wordpress:*:*';
+			}
+		}
+		return $bom;
+	}
+);
+`
+
+We are building a feature to automate this
+
 Remove component from BOM
 
 `
@@ -36,6 +54,7 @@ add_filter(
 				unset( $bom['components'][ $key ] );
 			}
 		}
+		return $bom;
 	}
 );
 `
@@ -62,6 +81,7 @@ add_filter(
 				),
 			),
 		);
+		return $bom;
 	}
 );
 `
@@ -80,6 +100,11 @@ $ composer update --no-dev
 1. See option page
 
 == Changelog ==
+
+= 1.1.0 =
+* Add CPE example
+* Fix Copyright
+* Remove purl
 
 = 1.0.2 =
 * Add icon

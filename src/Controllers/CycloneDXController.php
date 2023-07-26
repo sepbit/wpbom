@@ -61,10 +61,25 @@ class CycloneDXController {
 			),
 		);
 
+		$bom['components'][0] = array(
+			'type'     => 'application',
+			'bom-ref'  => 'pkg:deb/debian/wordpress@' . get_bloginfo( 'version' ),
+			'name'     => 'wordpress',
+			'version'  => get_bloginfo( 'version' ),
+			'purl'     => 'pkg:deb/debian/wordpress@' . get_bloginfo( 'version' ),
+			'licenses' => array(
+				array(
+					'license' => array(
+						'id' => 'gpl-2.0-or-later',
+					),
+				),
+			),
+		);
+
 		/*
 		 * Plugins
 		 */
-		$key = 0;
+		$key = 1;
 		foreach ( get_plugins() as $plugin ) {
 			if ( empty( $plugin['TextDomain'] ) || empty( $plugin['Version'] ) ) {
 				continue;
@@ -171,7 +186,7 @@ class CycloneDXController {
 			}
 		}
 
-		if ( isset( $_GET['download'] ) && ! empty( $_GET['download'] ) ) {
+		if ( isset( $_GET['wpbom_download'] ) && ! empty( $_GET['wpbom_download'] ) ) {
 			header( 'Content-Disposition: attachment; filename="bom.json"' );
 			wp_send_json( self::bom() );
 		}

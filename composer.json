@@ -20,5 +20,11 @@
     "fix-style": "phpcbf -p --standard=phpcs.xml wpbom.php src/",
     "check-style": "phpcs -p --standard=phpcs.xml wpbom.php src/",
     "security" : "phpcs -p --standard=Security wpbom.php src/"
+  },
+  "config": {
+    "allow-plugins": {
+      "cyclonedx/cyclonedx-php-composer": true,
+      "dealerdirect/phpcodesniffer-composer-installer": true
+    }
   }
 }

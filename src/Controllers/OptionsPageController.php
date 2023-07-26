@@ -36,7 +36,7 @@ class OptionsPageController {
 				'title'        => __( 'WpBom', 'wpbom' ),
 				'object_types' => array( 'options-page' ),
 				'option_key'   => 'wpbom',
-                                'icon_url'     => 'dashicons-admin-plugins',
+				'icon_url'     => 'dashicons-admin-plugins',
 			)
 		);
 		$cmb->add_field(
@@ -89,8 +89,8 @@ class OptionsPageController {
 
 		$url      = menu_page_url( 'wpbom', false );
 		$url      = wp_nonce_url( $url, 'wpbom' );
-		$update   = add_query_arg( 'update', 'true', $url );
-		$download = add_query_arg( 'download', 'true', $url );
+		$update   = add_query_arg( 'wpbom_update', 'true', $url );
+		$download = add_query_arg( 'wpbom_download', 'true', $url );
 		?>
 		<div class="custom-field-row <?php echo esc_attr( $classes ); ?>">
 			<p>
@@ -106,7 +106,7 @@ class OptionsPageController {
 			}
 		}
 
-		if ( isset( $_GET['update'] ) && ! empty( $_GET['update'] ) ) {
+		if ( isset( $_GET['wpbom_update'] ) && ! empty( $_GET['wpbom_update'] ) ) {
 			echo '<pre>';
 			print_r( \Sepbit\WpBom\Controllers\DependencyTrackController::update() );
 			echo '</pre>';

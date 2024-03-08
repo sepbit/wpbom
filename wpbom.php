@@ -14,7 +14,7 @@ namespace Sepbit\WpBom;
 
 defined( 'ABSPATH' ) || exit();
 
-define( 'SEPBIT_WPBOM_VER', '1.2.0' );
+define( 'SEPBIT_WPBOM_VER', '1.2.1' );
 define( 'SEPBIT_WPBOM_DIR', plugin_dir_path( __FILE__ ) );
 define( 'SEPBIT_WPBOM_URL', plugin_dir_url( __FILE__ ) );
 define( 'SEPBIT_WPBOM_PRE', '_wpbom' );

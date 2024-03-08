@@ -3,7 +3,7 @@
 Plugin Name: WpBom
 Plugin URI: https://gitlab.com/sepbit/wpbom
 Description: WordPress integration with OWASP CycloneDX and Dependency Track
-Version: 1.2.0
+Version: 1.2.1
 Author: Vitor Guia
 Author URI: https://vitor.guia.nom.br
 

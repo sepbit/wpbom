@@ -45,7 +45,7 @@ class DependencyTrackController {
 				CURLOPT_RETURNTRANSFER => true,
 				CURLOPT_ENCODING       => '',
 				CURLOPT_MAXREDIRS      => 10,
-				CURLOPT_TIMEOUT        => 30,
+				CURLOPT_TIMEOUT        => 10,
 				CURLOPT_HTTP_VERSION   => CURL_HTTP_VERSION_1_1,
 				CURLOPT_CUSTOMREQUEST  => 'POST',
 				CURLOPT_POSTFIELDS     => "-----011000010111000001101001\r\nContent-Disposition: form-data; name=\"project\"\r\n\r\n$project\r\n"

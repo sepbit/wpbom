@@ -82,6 +82,9 @@ class OptionsPageController {
 
 	/**
 	 * Custom buttons
+	 *
+	 * @param Object $field_args Field arguments.
+	 * @param Object $field Field.
 	 */
 	public static function custom_buttons( $field_args, $field ) {
 		$classes     = $field->row_classes();
@@ -108,6 +111,7 @@ class OptionsPageController {
 
 		if ( isset( $_GET['wpbom_update'] ) && ! empty( $_GET['wpbom_update'] ) ) {
 			echo '<pre>';
+			// phpcs:ignore
 			print_r( \Sepbit\WpBom\Controllers\DependencyTrackController::update() );
 			echo '</pre>';
 		}

@@ -70,7 +70,7 @@ class CycloneDXController {
 			'licenses' => array(
 				array(
 					'license' => array(
-						'id' => 'gpl-2.0-or-later',
+						'id' => 'GPL-2.0-or-later',
 					),
 				),
 			),
@@ -122,7 +122,7 @@ class CycloneDXController {
 				);
 			}
 
-			$key++;
+			++$key;
 		}
 
 		/*
@@ -170,7 +170,7 @@ class CycloneDXController {
 				);
 			}
 
-			$key++;
+			++$key;
 		}
 
 		return apply_filters( 'wpbom_bom', $bom );

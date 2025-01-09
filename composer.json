@@ -11,10 +11,10 @@
     "cmb2/cmb2": "dev-master"
   },
   "require-dev": {
-    "dealerdirect/phpcodesniffer-composer-installer": "^0.7.1",
-    "wp-coding-standards/wpcs": "^2.3",
+    "dealerdirect/phpcodesniffer-composer-installer": "^1.0",
+    "wp-coding-standards/wpcs": "^3.1",
     "pheromone/phpcs-security-audit": "^2.0",
-    "cyclonedx/cyclonedx-php-composer": "^3.9"
+    "cyclonedx/cyclonedx-php-composer": "^5.2"
   },
   "scripts": {
     "fix-style": "phpcbf -p --standard=phpcs.xml wpbom.php src/",

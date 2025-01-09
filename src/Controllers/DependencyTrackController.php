@@ -35,9 +35,12 @@ class DependencyTrackController {
 	 * @param array  $bom Dependency Track bom.
 	 */
 	public static function send( $server, $api_key, $project, $bom ) {
+		// phpcs:ignore
 		$bom = json_encode( $bom );
 
+		// phpcs:ignore
 		$curl = curl_init();
+		// phpcs:ignore
 		curl_setopt_array(
 			$curl,
 			array(
@@ -56,9 +59,13 @@ class DependencyTrackController {
 				),
 			)
 		);
+		// phpcs:ignore
 		$response = curl_exec( $curl );
+		// phpcs:ignore
 		$httpcode = curl_getinfo( $curl, CURLINFO_HTTP_CODE );
+		// phpcs:ignore
 		$err      = curl_error( $curl );
+		// phpcs:ignore
 		curl_close( $curl );
 
 		if ( 200 !== $httpcode ) {

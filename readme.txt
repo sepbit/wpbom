@@ -2,10 +2,10 @@
 Contributors: vitoranguia
 Donate link: https://liberapay.com/vitoranguia/
 Tags: BOM, CycloneDX, Dependency Track
-Requires at least: 4.7
-Tested up to: 6.4
-Stable tag: 1.2.1
-Requires PHP: 7.0
+Requires at least: 6.0
+Tested up to: 6.7
+Stable tag: 1.3.0
+Requires PHP: 8.2
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -100,6 +100,9 @@ $ composer update --no-dev
 1. See option page
 
 == Changelog ==
+
+= 1.3.0 =
+* Add PHP 8.4
 
 = 1.2.0 =
 * Add WordPress as component

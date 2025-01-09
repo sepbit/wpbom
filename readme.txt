@@ -4,7 +4,7 @@ Donate link: https://liberapay.com/vitoranguia/
 Tags: BOM, CycloneDX, Dependency Track
 Requires at least: 6.0
 Tested up to: 6.7
-Stable tag: 1.3.0
+Stable tag: 1.4.0
 Requires PHP: 8.2
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -101,7 +101,7 @@ $ composer update --no-dev
 
 == Changelog ==
 
-= 1.3.0 =
+= 1.4.0 =
 * Add PHP 8.4
 
 = 1.2.0 =
